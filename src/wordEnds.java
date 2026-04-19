@@ -14,7 +14,7 @@ public class wordEnds {
             if(strLength > i +wordLength){
                 result +=str.charAt(i + wordLength);
             }
-            i = str.indexOf(word, i+1);
+            i = str.indexOf(word, i+1);//check for the word again
         }
 
         return result;
