@@ -4,17 +4,23 @@ public class wordEnds {
     }
     public static String wordEnds(String str, String word) {
         String result = "";
-        for (int i = 0; i <= str.length() - word.length(); i++) {
-            if (str.substring(i, i + word.length()).equals(word)) {
-                if (i > 0) {
-                    result += str.charAt(i - 1);
-                }
-                if (i + word.length() < str.length()) {
-                    result += str.charAt(i + word.length());
-                }
+        Integer wordLength = word.length();
+        Integer strLength = str.length();
+
+        Integer i = str.indexOf(word);
+        while(i>=0){
+            if(i>0){
+                result += str.charAt(i-1);
             }
+            if(strLength > i +wordLength){
+                result +=str.charAt(i + wordLength);
+            }
+            i = str.indexOf(word, i+1);
         }
 
         return result;
+
+
+
     }
 }
