@@ -6,7 +6,6 @@ public class wordEnds {
         String result = "";
         Integer wordLength = word.length();
         Integer strLength = str.length();
-
         Integer i = str.indexOf(word);
         while(i>=0){
             if(i>0){
