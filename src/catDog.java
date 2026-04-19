@@ -2,6 +2,7 @@ public class catDog {
     public static void main(String[] args) {
         System.out.println(catDog("catxxdogxxxdog"));
     }
+
     public static Boolean catDog(String str){
         Integer dogCount =0;
         Integer catCount =0;
